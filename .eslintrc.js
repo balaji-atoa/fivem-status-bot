@@ -21,5 +21,17 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'no-console': 2,
+    'max-lines-per-function': 2,
+    'max-statements': [2, 20],
+    'max-nested-callbacks': 2,
+    'max-lines': 2,
+    complexity: 2,
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 };

@@ -10,6 +10,10 @@ import { IntentsBitField } from 'discord.js';
 import { CfxModule } from './cfx/cfx.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MongooseModule } from '@nestjs/mongoose';
+import {
+  StatusChannels,
+  StatusChannelsSchema,
+} from './schemas/status-channels.schema';
 
 @Module({
   imports: [
@@ -26,6 +30,9 @@ import { MongooseModule } from '@nestjs/mongoose';
         };
       },
     }),
+    MongooseModule.forFeature([
+      { name: StatusChannels.name, schema: StatusChannelsSchema },
+    ]),
     ScheduleModule.forRoot(),
     ConfigModule.forRoot({
       load: [loadEnvVars],

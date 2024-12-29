@@ -26,6 +26,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
+## todo
+- Implement softDelete
+- Implement guild 1 channel limit
+
 ## Installation
 
 ```bash

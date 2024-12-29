@@ -23,7 +23,6 @@ export class SlashCommandsService {
     const isSendable = interaction.channel.isSendable();
     const isThread = interaction.channel.isThread();
     const isTextBased = interaction.channel.isTextBased();
-    await interaction.deferReply();
 
     if (!isSendable || !isTextBased) {
       await interaction.reply({
@@ -53,6 +52,7 @@ export class SlashCommandsService {
     await document.save();
     await interaction.reply({
       content: `ReferenceId: ${document._id} - SETUP DONE!`,
+      ephemeral: true,
     });
   }
 
